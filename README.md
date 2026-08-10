@@ -1,4 +1,4 @@
-# Legixo GenAI Take-home — Document Q&A API
+# Agentic-rag-fastapi — Document Q&A API
 
 A small HTTP API that answers questions **only from an ingested document corpus**, using LangGraph to orchestrate retrieval, relevance grading, and grounded generation, with Pinecone as the vector store. If the documents don't contain the answer, the API says so explicitly instead of guessing.
 
@@ -301,4 +301,4 @@ Each of these was verified against Google's own developer forums / changelog bef
 
 ## Demo video
 
-[link to 5–10 min video: install → ingest → start API → `/ask` calls with real citations → one out-of-corpus question → walkthrough of `app/graph.py` and `docs/langgraph.md`]
+[[(https://drive.google.com/file/d/1Fxth8P7SUPv2NYeEcrqCDv5rWinoIuwW/view?usp=drive_link)]: install → ingest → start API → `/ask` calls with real citations → one out-of-corpus question → walkthrough of `app/graph.py` and `docs/langgraph.md`]
