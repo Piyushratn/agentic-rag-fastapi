@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "question": "What is the limitation period for contract claims under the fictional Riverside Code?",
+    "expected_source_files": ["01_matter_memo_arvind_v_northfield.md"],
+    "expected_facts": ["three years from breach date"],
+    "notes": "PASS - answer said three years from breach date, cited 01_matter_memo_arvind_v_northfield.md correctly. Note: citations array includes all 5 retrieved chunks, not just the one referenced inline (known limitation)"
+  },
+  {
+    "id": 2,
+    "question": "When is the next hearing in Arvind Mehta v. Northfield Logistics, and what is it for?",
+    "expected_source_files": ["01_matter_memo_arvind_v_northfield.md"],
+    "expected_facts": ["15 August 2025", "witness for the plaintiff / billing head"],
+    "notes": "PASS - answer said 15 August 2025, witness examination of billing head, cited 01_matter_memo_arvind_v_northfield.md correctly"
+  },
+  {
+    "id": 3,
+    "question": "How much written notice must Priya Nambiar or Bluecrest give to end the employment agreement?",
+    "expected_source_files": ["02_employment_agreement_excerpt.md"],
+    "expected_facts": ["60 days"],
+    "notes": "PASS - answer said 60 days written notice, cited 02_employment_agreement_excerpt.md correctly"
+  },
+  {
+    "id": 4,
+    "question": "How long does Priya's non-compete last after she leaves, and under what condition does it apply?",
+    "expected_source_files": ["02_employment_agreement_excerpt.md"],
+    "expected_facts": ["12 months", "same city as a Bluecrest office", "uses the same client list"],
+    "notes": "PASS - answer said 12 months, correctly stated both conditions (same city as Bluecrest office, same client list), cited 02_employment_agreement_excerpt.md correctly"
+  },
+  {
+    "id": 5,
+    "question": "How many days before a hearing must written arguments be filed, per the standard hearing notice wording?",
+    "expected_source_files": ["03_hearing_notice_template.md"],
+    "expected_facts": ["seven clear days"],
+    "notes": "PASS - answer said seven clear days, cited 03_hearing_notice_template.md correctly"
+  },
+  {
+    "id": 6,
+    "question": "What happened to Case CV-2023-4401, Lakeview Society v. City Water Board?",
+    "expected_source_files": ["03_hearing_notice_template.md"],
+    "expected_facts": ["adjourned to 22 September 2025", "interim relief on water supply"],
+    "notes": "PASS - answer said adjourned to 22 September 2025, correctly identified it concerned interim relief on water supply, cited 03_hearing_notice_template.md correctly"
+  },
+  {
+    "id": 7,
+    "question": "Under Section 14 of the Riverside Commercial Courts Act excerpt, when is mandatory mediation required and for how long?",
+    "expected_source_files": ["04_statute_style_excerpt_fictional.md"],
+    "expected_facts": ["suits above five lakh fictional rupees", "30 days", "unless both parties waive in writing"],
+    "notes": "PASS - answer said suits above five lakh fictional rupees, 30 days, unless waived in writing, cited 04_statute_style_excerpt_fictional.md correctly"
+  },
+  {
+    "id": 8,
+    "question": "What interest rate applies to delayed payments under Section 22 if the contract fixes no rate?",
+    "expected_source_files": ["04_statute_style_excerpt_fictional.md"],
+    "expected_facts": ["9% per year, simple interest", "from date of demand until payment"],
+    "notes": "PASS - answer said 9% per year simple interest, from date of demand until payment, cited 04_statute_style_excerpt_fictional.md correctly"
+  },
+  {
+    "id": 9,
+    "question": "What percentage of open invoices did Northfield offer to pay in the settlement call, and what was the counter?",
+    "expected_source_files": ["05_counsel_notes_settlement.md"],
+    "expected_facts": ["Northfield offered 70%", "counter at 85%"],
+    "notes": "PASS - answer said Northfield offered 70%, countered at 85%, cited 05_counsel_notes_settlement.md correctly"
+  },
+  {
+    "id": 10,
+    "question": "Are the settlement talks in the Arvind Mehta matter confidential or admissible?",
+    "expected_source_files": ["05_counsel_notes_settlement.md"],
+    "expected_facts": ["without prejudice unless a signed term sheet exists"],
+    "notes": "PASS - answer said talks are without prejudice unless a signed term sheet exists, cited 05_counsel_notes_settlement.md correctly. Model appropriately noted the source doc doesn't explicitly address admissibility beyond that, rather than guessing"
+  },
+  {
+    "id": 11,
+    "question": "What is the monthly rent for Unit 4B, Harbor View Tower?",
+    "expected_source_files": ["06_property_lease_clause.md"],
+    "expected_facts": ["₹45,000"],
+    "notes": "PASS - answer said correct rent amount (â¹ encoding artifact present due to file encoding issue - see docs/langgraph.md known limitations), cited 06_property_lease_clause.md correctly"
+  },
+  {
+    "id": 12,
+    "question": "How much security deposit is held for the Harbor Bean Roasters lease, and when is it refundable?",
+    "expected_source_files": ["06_property_lease_clause.md"],
+    "expected_facts": ["₹1,35,000 (three months' rent)", "within 45 days of handover if no damage beyond normal wear"],
+    "notes": "PASS - answer said correct deposit amount, three months' rent, refundable within 45 days if no damage, cited 06_property_lease_clause.md correctly"
+  },
+  {
+    "id": 13,
+    "question": "Is subletting allowed at Unit 4B, Harbor View Tower?",
+    "expected_source_files": ["06_property_lease_clause.md"],
+    "expected_facts": ["not allowed without written consent of the lessor"],
+    "notes": "PASS (with note) - answer phrased it as 'subletting is allowed, provided there is written consent' rather than 'not allowed without consent' - semantically equivalent but inverted framing could read as slightly less strict than source. Correctly cited 06_property_lease_clause.md"
+  },
+  {
+    "id": 14,
+    "question": "What is the capital of France?",
+    "expected_source_files": [],
+    "expected_facts": ["out of corpus -- should say it cannot find this in the documents, no citations"],
+    "notes": "FAIL (transient) - request returned a 500 Internal Server Error on this run rather than a graceful cannot_answer response. Re-tested separately and confirmed the graph logic itself works correctly for out-of-corpus questions (see Q15) - this looked like a one-off server hiccup, not a logic bug, but flagging as FAIL since it did not behave correctly on this specific run and needs re-verification before submission"
+  },
+  {
+    "id": 15,
+    "question": "What is the current GST rate on legal services in India?",
+    "expected_source_files": [],
+    "expected_facts": ["out of corpus -- should say it cannot find this in the documents, no citations"],
+    "notes": "PASS - correctly said it could not find this in the documents, citations array empty. Trace confirms full branch logic worked: retrieve -> grade bad -> rewrite (attempt 1) -> retrieve -> grade bad -> rewrite (attempt 2) -> retrieve -> grade bad -> loop cap reached -> cannot_answer. This is the cleanest proof of the branching and loop-cap behavior in the whole test set"
+  }
+]
