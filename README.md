@@ -3,7 +3,7 @@
 A small HTTP API that answers questions **only from an ingested document corpus**, using LangGraph to orchestrate retrieval, relevance grading, and grounded generation, with Pinecone as the vector store. If the documents don't contain the answer, the API says so explicitly instead of guessing.
 
 **Author:** Piyush Ratn
-**Assignment:** Legixo Thinklabs — Gen AI Intern Take-home
+
 
 ---
 
